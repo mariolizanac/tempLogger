@@ -1,7 +1,7 @@
 leeTemperatura
 ==============
 
-Lee la temperatura de un sensor con impedancia variable. Sensor comprado en http://www.cooking-hacks.com/ ..
+Lee la temperatura de un sensor con impedancia variable. 
 
 
-http://www.cooking-hacks.com/temperature-sensor-with-steel-head
+Sensor comprado en http://www.cooking-hacks.com/temperature-sensor-with-steel-head
