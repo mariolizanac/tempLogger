@@ -1,11 +1,11 @@
 #include "variablesGlobales.h"
 #include <Arduino.h>
 
-float Vmedido;                    //Se lee el pin A5, Hacer un div de tension con una resistencia de 10KOhm y el sensor de temp.
+float Vmedido;                    
 int i;
 int temperatura;
 float Rt;
-float temp[50]=            {31.3081, 29.7487,  28.2860, 26.8848, 25.5702,       //Datos de la impedancia del sensor desde cero grados hasta cincuenta.
+float temp[50]=            {31.3081, 29.7487,  28.2860, 26.8848, 25.5702,  
                             24.3274, 23.1523, 22.0407, 20.9889, 19.9934, 
                             19.0509, 18.1582, 17.3124, 16.5109, 15.7511, 
                             15.0306, 14.3472, 13.6987, 13.0833, 12.4990, 
@@ -16,7 +16,7 @@ float temp[50]=            {31.3081, 29.7487,  28.2860, 26.8848, 25.5702,       
                             5.08828, 4.88838, 4.69743, 4.51498, 4.34060,
                             4.17391, 4.01452, 3.86207, 3.71624, 3.58800};
 
-
+/*Datos de la impedancia del sensor desde cero grados hasta cincuenta.*/
 
 
 
@@ -26,13 +26,13 @@ int calculoTemp(int pin){
   
   Vmedido=analogRead(pin);                                
   Rt=Vmedido*10000/(1023-Vmedido);
-  for(i=1; i<=50; i++){                                                          //Recorro el vector temp[]
+  for(i=1; i<=50; i++){                        //Recorro el vector temp[]
     if(Rt>temp[i]*1000){
       indice=i;
-      break;                                                                     //Cuando llegue a la temperatura actual salgo del for
+      break;                                   //Cuando llegue a la temperatura actual salgo del for
     }
   }
   
-  return indice;                                                                //Devuelvo la temperatura.
+  return indice;                              //Devuelvo la temperatura.
 }
 
