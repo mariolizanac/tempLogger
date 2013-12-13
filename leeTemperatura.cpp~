@@ -1,7 +1,6 @@
 #include "variablesGlobales.h"
 #include <Arduino.h>
 
-
 float Vmedido;                    
 int i;
 int temperatura;
