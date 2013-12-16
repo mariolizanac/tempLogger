@@ -1,4 +1,3 @@
-#include "variablesGlobales.h"
 #include <Arduino.h>
 
 
