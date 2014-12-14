@@ -1,2 +1,0 @@
-int calculoTemp(int pin);
-
