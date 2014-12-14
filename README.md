@@ -1,7 +1,7 @@
-leeTemperatura
+tempLogger
 ==============
 
-Lee la temperatura de un sensor con impedancia variable. 
+This project use some PICs/Arduinos as temperature readers and send it to a Raspberry PI using wireless communication module/bluetooth/serial. Then the Raspberry PI have to show in graphical statistics. 
 
 
-Sensor comprado en http://www.cooking-hacks.com/temperature-sensor-with-steel-head
+Sensor bought in http://www.cooking-hacks.com/temperature-sensor-with-steel-head
