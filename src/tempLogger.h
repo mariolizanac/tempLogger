@@ -16,12 +16,17 @@ along with leeTemp.  If not, see <http://www.gnu.org/licenses/>.
 
 #ifndef tempLogger_h
 #define tempLogger_h
+
 #include <Arduino.h>
+#include "LowPower.h"
+
 
 class tempLogger
 {
 public:
   int calculoTemp(int pin);
+  void pinModeSetup();
+  void checkSleepBehaviour();
 
   int temperatura;
   float Vmedido;

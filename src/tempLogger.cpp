@@ -28,14 +28,37 @@ int tempLogger::calculoTemp(int pin){
       var = i;
       break;
     }
-    
-  }
 
+  }
   return var;
 }
 
+void checkSleepBehaviour(){
+  if(ledEstado){                                                              //Compruebo si se enciende cada 8 segundos
+    digitalWrite(13, ledEstado);
+  }
+  else{
+    digitalWrite(13, ledEstado);
+  }
+  ledEstado=!ledEstado;
+}
 
 
-void setup(){}
+void pinModeSetup(){
+  pinMode(13, OUTPUT);
+}
 
-void loop(){}
+
+void setup(){
+  pinModeSetup();
+  checkSleepBehaviour();
+}
+
+void loop(){
+  LowPower.powerDown(SLEEP_8S, ADC_OFF, BOD_OFF);                             //Lo primero que hago es dormir al micro.
+
+
+
+
+
+}
